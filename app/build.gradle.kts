@@ -4,6 +4,16 @@ android { namespace = "com.ashrafali.webtoonbridge"; compileSdk = 35
     defaultConfig { applicationId = "com.ashrafali.webtoonbridge"; minSdk = 26; targetSdk = 35; versionCode = 2; versionName = "0.2.0"
         ndk { abiFilters += listOf("armeabi-v7a") }
     }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
     buildTypes { release { isMinifyEnabled = false } }
     buildFeatures { buildConfig = true }
     splits { abi { isEnable = false } }
